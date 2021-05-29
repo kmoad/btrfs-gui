@@ -379,7 +379,7 @@ if __name__ == '__main__':
     if not ret.success:
         print(ret.traceback)
         sys.exit(1)
-    fs = client.remote_call('get_filesystem', '/local/rust')
+    fs = client.remote_call('get_filesystem', '/local/data')
     fsinfo = fs.fs_info()
     print(f'Mounted at: {fs.path}')
     print(f'Using {fsinfo.num_devices} devices')

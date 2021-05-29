@@ -22,5 +22,5 @@ for device in fs.devices():
     print(device.devid, device.bytes_used/device.total_bytes)
 for space in fs.space_info():
     print(space)
-for tree, path in bu.iter_sv(fs):
-    print(tree, path)
+for sv in bu.iter_sv(fs):
+    print(sv.path)
